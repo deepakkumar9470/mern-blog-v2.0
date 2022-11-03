@@ -1,0 +1,384 @@
+
+// font-family: 'Nunito', sans-serif;
+// font-family: 'Open Sans', sans-serif;
+// font-family: 'Roboto', sans-serif;
+
+$light-green:#C1FFD7;
+$light-blue:#ECFBFC;
+$link-color:#9BE3DE;
+$white:#fff;
+$black:#1B2430;
+$light-gray:#c2c2c2;
+$teal-color:#B1D7B4;
+
+.app{
+  display: flex;
+  justify-content: center;
+  .link{
+    text-decoration: none;
+     color: inherit;
+  }
+
+  
+    .container{
+      width: 1024px;
+
+
+        //NAVBAR
+      .navbar{
+
+        .container{
+        padding: 10px 0px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .logo{
+          img{
+            width: 80px;
+          }
+
+          }
+        .navlinks{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            h6{
+            font-size: 16px;
+            font-weight: 400;
+            }
+            span{cursor: pointer;}
+
+            .write{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 14px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: $light-green;
+            cursor: pointer;
+            transition: 0.3s ease-in-out;
+            &:hover{
+              background-color: $white;
+              color: $black;
+              border: 1px solid $black;
+            }
+            }
+        }
+        }
+      }
+           
+      //LOGIN
+      .auth{
+        height: 100vh;
+        background-color: $light-green;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        h1{
+            font-size: 20px;
+            color: teal;
+            font-weight: bolder;
+            margin-bottom: 20px;
+        }
+        form{
+            width: 300px;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            background-color: $white;
+            gap: 20px;
+        }
+        input{
+            padding: 10px;
+            border: none;
+            outline: none;
+            border-bottom: 1px solid $light-gray;
+        }
+        p{
+            font-size: 12px;
+            color: red;
+            text-align: center;
+        }
+        button{
+            border: none;
+            padding:10px;
+            background-color: $light-green;
+            color: $black;
+            cursor: pointer;
+        }
+        span{
+            text-align: center;
+            font-size: 12px;
+        }
+      }
+
+
+
+      .link{
+        list-style: none;
+        color: inherit;
+      }
+
+        // SINGLE PAGE
+       .single{
+        display: flex;
+        gap: 50px;
+
+        .content{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+          flex: 5;
+          img{
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+          }
+          .user{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+            span{
+                font-weight: bolder;
+            }
+            img{
+                width: 50px;
+                height: 50px;
+                object-fit: cover;
+                border-radius: 50%;
+            }
+          }
+          h1{
+            font-size: 40px;
+            color: $black;
+          }
+          p{
+            text-align: justify;
+            line-height: 25px;
+          }
+
+          .actions{
+            display: flex;
+            gap: 10px;
+            img{
+                width: 30px;
+                height: 30px;
+            }
+          }
+        }
+        .menu{
+            display: flex;
+            flex-direction: column;
+            flex: 2; 
+            gap: 25px;
+          h1{
+             font-size: 20px;
+             color: $black;
+          }
+          .post{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            img{
+                width: 100%;
+                height: 200px;
+                object-fit: cover;
+            }
+            h2{
+                color: $black;
+            }
+            button{
+                width: max-content;
+                padding: 8.5px 15px;
+                border: none;
+                cursor: pointer;
+                background-color: $white;
+                color: $black;
+                border: 1px solid $black;
+                transition: 0.3s ease-in;
+                &:hover{
+                    border: 1px solid $white;
+                    color: $black;
+                    background-color: $light-green;
+
+                }
+            }
+
+          }
+
+        }
+       }
+
+       // WRITE PAGE
+
+       .add{
+        margin-top: 20px;
+        display: flex;
+        gap: 20px;
+        .content{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            flex: 5;
+            input{
+                border: 1px solid $light-gray;
+                padding: 10px;
+            }
+            .editorContainer{
+              height: 300px;
+              // overflow: scroll;
+              border: 1px solid $light-gray;
+              .editor{
+                height: 100%;
+                border: none !important;
+              }
+            }
+        }
+        .menu{
+            flex: 2;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            .item{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                border: 1px solid $light-gray;
+                padding: 10px;
+                color: #555;
+                flex: 1;
+                font-size: 12px;
+               h1{
+                font-size: 20px;
+               } 
+               .file{
+                cursor: pointer;
+                text-decoration: underline;
+               }
+
+               .buttons{
+                display: flex;
+                padding: 5px 0;
+                justify-content: space-between;
+                :first-child{
+                    color: $black;
+                    cursor: pointer;
+                    background-color: $white;
+                    border: 1px solid $light-gray;
+                    padding: 3px 5px;
+                }
+                :last-child{
+                    color: $black;
+                    cursor: pointer;
+                    background-color: $light-green;
+                    border: 1px solid $light-gray;
+                    padding: 3px 5px;
+                }
+               }
+               .cat{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                color: teal;
+               }
+            }
+        }
+       }
+
+          //Footer
+    footer{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px;
+      font-size: 12px ;
+      margin-top: 100px;
+      background-color: $light-green;
+      img{
+        height: 50px;
+      }
+    }
+
+      
+    //HOME PAGE
+
+    .home{
+
+
+      .posts{
+
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 150px;
+        .post{
+          display: flex;
+          gap: 100px;
+          &:nth-child(2n+1){
+            flex-direction: row-reverse;
+          }
+          .img{
+             flex: 2;
+             position: relative;
+             &::after{
+              width: 100%;
+              height: 100%;
+              content: '';
+              position: absolute;
+              background-color: $light-green;
+              top: 20px;
+              left: -20px;
+              z-index: -1;
+              border-radius: 5px;
+             }
+             img{
+              width: 100%;
+              border-radius: 5px;
+              max-height: 400px;
+              object-fit: cover;
+             }
+          }
+
+          .content{
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            flex: 3;
+
+            h1{
+              font-size: 42px;
+            }
+            p{
+              font-size: 18px;
+            }
+           button{
+            width: max-content;
+            background-color: $light-green;
+            border: 1px solid teal;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            color: $black;
+            &:hover{
+              border: 1px solid $white;
+              color: $black;
+              background-color: $light-green;
+            }
+           }
+          
+          }
+        }
+      }
+
+    }
+
+
+    }
+}
